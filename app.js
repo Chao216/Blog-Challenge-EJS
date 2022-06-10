@@ -54,6 +54,15 @@ app.get("/post/:postID", (req,res)=>{
     postTitle===requestTitle? res.render("post", {postTitle:item.title, postContent:item.body}):console.log("");
   })
 })
+//an example to further understand route params
+app.get("/section/:sectionID/field/:fieldID", (req,res)=>{
+  res.write(req.params.sectionID)
+  res.write("  ")
+
+  res.write(req.params.fieldID)
+    res.write("  ")
+  res.send()
+})
 
 
 

@@ -63,3 +63,26 @@ install lodash in npm   `npm i lodash`
 require lodash in node  `const _ = require('lodash')`
 use lodash `_.lowerCase()`
 ----
+
+## the final part read more challenge14
+you can use anchor tag and together with route params previously set
+```
+
+app.get("/post/:postID", (req,res)=>{
+
+
+
+<a href="/post/<%=item.title%>">Read more</a>
+```
+
+an example to further understand route params
+```
+app.get("/section/:sectionID/field/:fieldID", (req,res)=>{
+  res.write(req.params.sectionID)
+  res.write("  ")
+
+  res.write(req.params.fieldID)
+    res.write("  ")
+  res.send()
+})
+```

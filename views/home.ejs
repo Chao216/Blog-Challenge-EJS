@@ -11,7 +11,8 @@
 <%post.forEach((item)=>{%>
 
     <h1><%=item.title%></h1>
-    <p><%=item.body.substring(0,30)%>
+    <p><%=item.body.substring(0,30)%> ... <a href="/post/<%=item.title%>">Read more</a>
+
 
     </p>
 
