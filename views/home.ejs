@@ -8,6 +8,14 @@
 </p>
 
 
+<%post.forEach((item)=>{%>
+
+    <h1><%=item.title%></h1>
+    <p><%=item.body.substring(0,30)%>
+
+    </p>
+
+<%})%>
 
 
 <%- include("./partials/footer"); -%>

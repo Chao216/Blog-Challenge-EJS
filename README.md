@@ -25,3 +25,41 @@ app.get("/about", (req,res)=>{
 })
 
 ```
+-----
+for challenge14 you can use eitehr for loop or forEach
+```
+<% for (let i =0; i < post.length; i++) {%>
+  <% console.log(post[i].title)%>
+<%}%>
+
+<%post.forEach((item)=>{%>
+  <%console.log(item.title)%>
+<%})%>
+```
+-----
+you can use `rs` to force restart nodemon when it is running.
+---
+You can use route params
+```
+app.get("/post/:postID", (req,res)=>{
+  var requestTitle = _.lowerCase(req.params.postID)
+
+  blogs.forEach((item)=>{
+
+    var postTitle = _.lowerCase(item.title)
+
+    postTitle===requestTitle? res.render("post", {postTitle:item.title, postContent:item.body}):console.log("");
+  })
+})
+
+
+
+```
+for more details, see [route params](https://expressjs.com/en/guide/routing.html)
+----
+## intro to lodash
+
+install lodash in npm   `npm i lodash`
+require lodash in node  `const _ = require('lodash')`
+use lodash `_.lowerCase()`
+----
